@@ -1,0 +1,7 @@
+pp.post('/analyze', (req, res) => {
+  const { address } = req.body;
+  const report = analyzeWallet(address);
+  res.json(report);
+});
+
+app.listen(3000, () => console.log('CryptoBites API running on port 3000'));
